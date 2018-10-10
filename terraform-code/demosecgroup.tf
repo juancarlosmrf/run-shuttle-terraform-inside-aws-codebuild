@@ -1,19 +1,16 @@
-resource "aws_security_group" "demosg" {
-  name = "${var.prefix}"
-  tags {
-        Name = "${var.prefix}"
-  }
-  description = "${var.prefix} SG"
-  egress {
+resource "aws_security_group" "demo-allow-all-sg" {
+  name        = "${var.prefix}-allow-all"
+  description = "Allow all demo inbound traffic SG"
+
+  ingress {
     from_port   = 0
-    to_port     = 65535 # All outbound traffic
+    to_port     = 65535
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-   }
-   ingress {
-     from_port   = 443
-     to_port     = 443 # All outbound traffic
-     protocol    = "tcp"
-     cidr_blocks = ["0.0.0.0/0"]
-    }
+  }
+
+  tags {
+    Name = "${var.prefix}-sg"
+  }
 }
+
