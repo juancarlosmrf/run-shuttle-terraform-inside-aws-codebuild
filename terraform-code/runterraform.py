@@ -22,6 +22,8 @@ else:
 
 mycommands.extend([ "-var", "region="+myregion , "-var", "prefix="+prefix])
 
+mycommands.extend(["-auto-approve"])
+
 print mycommands
 
 call(mycommands)
