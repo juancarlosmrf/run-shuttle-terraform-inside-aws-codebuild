@@ -113,13 +113,13 @@
                     "Ref": "TheAdminrole"
                 },
                 "Source": {
-                    "Location": "https://github.com/juancarlosmrf/run-shuttle-terraform-inside-aws-codebuild",
+                    "Location": "https://github.com/juancarlosmrf/run-shuttle-terraform-inside-aws-codebuild.git",
                     "Type": "GITHUB"
                 },
                 "Tags": [
                     {
                         "Key": "Project",
-                        "Value": "Run Shuttle From CodeBuild (Terraform)"
+                        "Value": "Run Shuttle From CodeBuild with Terraform"
                     }
                 ],
                 "TimeoutInMinutes": 10
